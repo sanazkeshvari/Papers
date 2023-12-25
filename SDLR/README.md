@@ -9,4 +9,4 @@ The knowledge distillation framework of SDLR. Both teacher and student models tr
 
 # Files of SDLR
 
-ListSD: This file is the loss function that can add to file of model folder in AArank method in <link src="https://github.com/allegro/allRank">
+ListSD: This file is the loss function that can add to file of model folder in Allrank method in "https://github.com/allegro/allRank"
