@@ -9,9 +9,10 @@ The knowledge distillation framework of SDLR. Both teacher and student models tr
 
 # Files of SDLR
 
-# ListSD: This file is the loss function that can add to file of model folder in Allrank method in "https://github.com/allegro/allRank"
-This is the loss function of techear phase.
+# loss function of techear phase 
+ListSD : This file is the loss function that can add to file of model folder in Allrank method in "https://github.com/allegro/allRank".
 
-# ListSDStu is the loss function in student phase witch should add to model folder in Allrank method.
+# loss function of student phase
+ListSDStu : This file is the loss function that can add to file of model folder in Allrank method in "https://github.com/allegro/allRank".
 
 
