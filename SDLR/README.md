@@ -6,7 +6,7 @@ The knowledge distillation framework of SDLR. Both teacher and student models tr
 
 
 
-<img width="1315" alt="model1" src="[https://github.com/sanazkeshvari/RankingSDLR/assets/48029925/b8e5b9db-679e-4c4e-9994-82b44bbd7751](https://github.com/sanazkeshvari/Papers/assets/48029925/823bc2fa-9f9a-461d-a3cd-bfc9a2616ed9)">
+<img width="1315" alt="model1" src="https://github.com/sanazkeshvari/Papers/assets/48029925/823bc2fa-9f9a-461d-a3cd-bfc9a2616ed9">
 
 
 # Files of SDLR
