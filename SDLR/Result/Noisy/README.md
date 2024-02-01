@@ -1,1 +1,0 @@
-# Result of Noisy data
