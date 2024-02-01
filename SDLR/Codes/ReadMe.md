@@ -7,3 +7,11 @@
 
 
 "_init_", "listSDStu" . "listSDStus" in moldels/losses folder
+
+# Files of SDLR
+
+# loss function of techear phase 
+ListSD : This file is the loss function that can add to file of model folder in Allrank method in "https://github.com/allegro/allRank".
+
+# loss function of student phase
+ListSDStu : This file is the loss function that can add to file of model folder in Allrank method in "https://github.com/allegro/allRank".
