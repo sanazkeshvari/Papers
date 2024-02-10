@@ -1,4 +1,5 @@
 The performance measurement of implementing different baseline methods are reported here that directories named after each baseline methods.
+\n
  Each directory contains of 6 tabular files that shows the results of MQ2007, MQ2008, MSLR10K, MSLR30K, Yahoo!Set1, and Yahoo!Set2 with metrics of NDCG and MRR at 1st, 2nd, 3rd, 5th, 10th, 20th positions.
 
  Also, A brief preview of them is showed in table below.
