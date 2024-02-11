@@ -7,7 +7,7 @@ The keypoints of this research are:
 2. A Self-Distillation model which is one of the novel approches in knowledge disillation models is used in SDLR.
 3. SDLR use both data and the content came from the distribution of data for learn which document is more infomative.
 4. Having the content of data by its distribution make SDLR a robust model against normal noise with different rate.
-5. SDLR outperformed other baseline methods (in benchmark mothods) and the previous research ListMAP.
+5. SDLR outperformed other baseline methods (in benchmark mothods) and the previous research <a href = "https://www.sciencedirect.com/science/article/abs/pii/S0306457322000802">ListMAP</a> that target training generalizable models.
 
 The knowledge distillation framework of SDLR. Both teacher and student models train a Listwise Learning to Rank model, which is dependent on an approximation of the feature’s bandwidths. The teacher model estimates the appropriate bandwidth matrix in an iterative manner.
 
