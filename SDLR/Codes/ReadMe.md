@@ -5,7 +5,7 @@ For Experimental Implementations, the <a href = "https://github.com/allegro/allR
   
   Replace `train_utils.py` in `training` directory of target package.
   
-  Replace `dataset_loading.py` from here with `data` directory of allrank package.
+  Replace `dataset_loading.py` from here within `data` directory of allrank package.
   
   Replace `__init__.py` from here with similar one in `losses` in `models` directory of allrank package.
   
