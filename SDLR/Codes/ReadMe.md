@@ -1,3 +1,11 @@
+For Experimental Implementation, the <a href = "https://github.com/allegro/allRank">allrank</a> package of Tensorflow is used. Some changes or additive code is utilize on that package which is as following:
+
+### 1. Replacements:
+  Replace `main.py` of this directory with same file of `allrank` directory.
+### 2. Adding:
+  s
+
+
 "Compute_BandWidth_torch" and "Train_utils"  in training folder
 
 
