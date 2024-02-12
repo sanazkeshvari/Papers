@@ -1,6 +1,6 @@
 # A Self-Distilled Learning to Rank(SDLR)
 
- A Self-Distillation model is used which the structure of teacher model and student model were fixed, to learn how to rank documents come from webpages in information retrieval. The model contains of Fully Connected layers and Transfer Blocks that has Attention layers. The model's structure and its parameters setting was written in the paper.
+ In this research, a Self-Distillation model is used which the structure of teacher model and student model were fixed, to learn how to rank documents come from webpages in information retrieval. The model contains of Fully Connected layers and Transfer Blocks that has Attention layers. The model's structure and its parameters setting was written in the paper.
 
 The keypoints of this research are:
 1. SDLR is a listwise learning to rank(L2R) model which is used a listwise loss function to learn how to rank a list of documents.
