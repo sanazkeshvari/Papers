@@ -17,7 +17,7 @@ For Experimental Implementations, the <a href = "https://github.com/allegro/allR
   
   Change name of loss to "listSDStu" for Teacher phase and "listSDStus" for Student phase in `lambdarank.json`.
   
-  Change the "inupt-norm" value to ${\color{blue}True}$ for MSLR10K and MSLR30K.
+  Change the "inupt-norm" value to ${\color{cyan}True}$ for MSLR10K and MSLR30K.
   
 
 Important Note: There is a change in running teacher and student. Two different directory should be made for Student and Teacher with same mentioned changes above. After training of Teacher phase finished, the directory `Parameters` from `allrank` direcotory should copy to `allrank` directory of the Student, then with changing `lambdarank` setting in Student directory, The Student phase training could be started. 
