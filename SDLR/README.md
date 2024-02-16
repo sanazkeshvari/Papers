@@ -5,8 +5,8 @@
 The keypoints of this research are:
 1. SDLR is a listwise learning to rank(L2R) model which is used a listwise loss function to learn how to rank a list of documents.
 2. A Self-Distillation model which is one of the novel approches in knowledge disillation models is used in SDLR.
-3. SDLR use both data and the content came from the distribution of data for learn which document is more infomative.
-4. Having the content of data by its distribution make SDLR a robust model against normal noise with different rate.
+3. SDLR use both data and the Concept came from the distribution of data for learn which document is more infomative.
+4. Having the Concept of data by its distribution make SDLR a robust model against normal noise with different rate.
 5. SDLR outperformed other baseline methods (in benchmark mothods) and the previous research <a href = "https://www.sciencedirect.com/science/article/abs/pii/S0306457322000802">ListMAP</a> that target training generalizable models.
 
 ## Training
