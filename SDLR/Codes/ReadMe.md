@@ -1,7 +1,7 @@
 For Experimental Implementations, the <a href = "https://github.com/allegro/allRank">allrank</a> package of Tensorflow is used. Some changes or additive code is utilize on that package which is as following:
 
 ### 1. Replacements:
-  Replace `main.py` of this directory with same file in `allrank` directory of allrank package.
+  Replace `main.py` and `config.py` of this directory with same file in `allrank` directory of allrank package.
   
   Replace `train_utils.py` in `training` directory of target package.
   
@@ -9,7 +9,6 @@ For Experimental Implementations, the <a href = "https://github.com/allegro/allR
   
   Replace `__init__.py` from here with similar one in `losses` in `models` directory of allrank package.
   
-  Replace `config.py` with existed file in ` ` directory.
 ### 2. Adding:
   Add `listSDStu.py` and `listSDStu.py` from here to directory `losses` in `models` directory of allrank packge.
 ### 3. Changes In Code:
