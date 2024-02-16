@@ -21,6 +21,3 @@ For Experimental Implementations, the <a href = "https://github.com/allegro/allR
 
 <b>Important Note</b>: There is a change in running <i>teacher</i> and <i>student</i>. Two different directory should be made for Student and Teacher with same mentioned changes above. After training of Teacher phase finished, the directory `Parameters` from `allrank` direcotory should copy to `allrank` directory of the Student, then with changing `lambdarank` setting in Student directory, The Student phase training could be started. 
 
-
-"Compute_BandWidth_torch" and "Train_utils"  in training folder
-
