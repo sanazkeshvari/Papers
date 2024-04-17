@@ -212,7 +212,7 @@ def fit(epochs, model, loss_func, optimizer, scheduler, train_dl, valid_dl, conf
         ##Temp_Update_Indices = (Temp_Update < conf.BandWidth).to(torch.int8)
         Temp_Update_Indices = torch.add((Temp_Update < conf.BandWidth).to(torch.int8), (Temp_Update < 0.3).to(torch.int8))
         Temp_Update_Indices = (Temp_Update_Indices > 0.9).to(torch.int8)
-        conf.BandWidth = torch.add(torch.multiply(torch.subtract(1, Temp_Update_Indices), conf.BandWidth), torch.multiply(Temp_Update_Indices, Temp_Update))
+        conf.BandWidth = torch.add(torch.multiply(torch.subtract(torch.tensor(1.0), Temp_Update_Indices), conf.BandWidth), torch.multiply(Temp_Update_Indices, Temp_Update))
         #conf.BandWidth = torch.absolute(conf.BandWidth)
         if not os.path.isdir("./Parameters/One/" + loss_func.keywords["Parameters_Path"] + "/") : os.makedirs("./Parameters/One/" + loss_func.keywords["Parameters_Path"] + "/")
         Temp_BandWidth = pd.DataFrame(conf.BandWidth.cpu())
