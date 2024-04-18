@@ -1,11 +1,14 @@
 For Experimental Implementations, the <a href = "https://github.com/allegro/allRank">allrank</a> package of PyTorch is used. Some changes or additive code is utilize on that package which is as following:
 
 
-The Implementaiotion has 2 phase as the paper says, Teacher Phase and Student Phase respectfully that have steps below for implementing them. Also, there is a GIF below that show the progress of how to run These Phases in the correct way in details:
+The Implementaiotion has 2 phase as the paper says, Teacher Phase and Student Phase respectfully that have ordinal steps below for implementing them. Also, there is a GIF below that show the progress of how to run These Phases in the correct way in details:
 
-## Teacher Phase:
-
-## Student Phase:
+### Teacher Phase:
+  1. Unpack the <a href = "https://github.com/allegro/allRank">allrank</a> package in the target directory (such as a directory named Teacher).
+  2. Download and unpack the SDLR.zip file (which contains of all the implementation codes in current directory).
+  3. Replace or overwrite the unpacked codes of SDLR.zip into the `allrank` directory of the extracted <a href = "https://github.com/allegro/allRank">allrank</a> package.
+  
+### Student Phase:
   1. Do first three steps of 
 
 
