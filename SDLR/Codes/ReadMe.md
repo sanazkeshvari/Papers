@@ -42,6 +42,7 @@ The Implementaiotion has 2 phases as the paper says, Teacher Phase and Student P
 
 <br/> <br/> <br/> <br/> <br/>
 
+<!---
 ### 1. Replacements:
   Replace `main.py` and `config.py` of this directory with same file in `allrank` directory of allrank package.
   
@@ -62,4 +63,7 @@ The Implementaiotion has 2 phases as the paper says, Teacher Phase and Student P
   
 
 <b>Important Note</b>: There is a change in running <i>teacher</i> and <i>student</i>. Two different directory should be made for Student and Teacher with same mentioned changes above. After training of Teacher phase finished, the directory `Parameters` from `allrank` direcotory should copy to `allrank` directory of the Student, then with changing `lambdarank` setting in Student directory, The Student phase training could be started. 
+
+--->
+
 
