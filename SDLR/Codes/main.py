@@ -143,6 +143,14 @@ def run(i):
 
 if __name__ == "__main__":
     from allrank import config as conf ###
+
+    conf.Noise_Percent = 1.0 # (0.3 Is 30%) Data Percent For Being Noisy
+    conf.Max_Noise = -0.1 # If Negative Then Dynamic Noise And If Positive, Variance Should Be Defined Like 0.03 (Default: 1 That Is Between [0, 1])
+
+    Run_Times = []
+
+    conf.Data_Percent = 0.8
+    
     for i in range(2,11):
         #if i > 1: break
         #if i > 13 and i < 21:
@@ -150,6 +158,12 @@ if __name__ == "__main__":
         #i = 22
         print("iteration : ",i)
         conf.BandWidth_LR = 1e-4
+        Start_Time = time.time()
         run(i)
+
+        # Save Times
+        Run_Times += [[i, time.time() - Start_Time]]
+        pd.DataFrame(Run_Times, columns = ["Running_Index", "Time"]).to_csv(os.getcwd() + "/Run_Times.csv")
+
 
 
