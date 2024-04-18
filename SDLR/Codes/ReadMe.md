@@ -36,7 +36,7 @@ The Implementaiotion has 2 phases as the paper says, Teacher Phase and Student P
         
      b. if its value is positive it will add a Normal Distribution Noise with the set value that means the values of additive noise are in the range of minus and positive of that value (E.G. if Max_Noise equals 0.05 then it mean the values of Normal Distribution Noise will be in the range of -0.05 and 0.05). <br/>   
      c. if the value of Max_Noise was set to a minus value then the noise will be add to data based on the variance of each feature. <br/>
-  3. For changing the amount of data for training in Teacher Phase and Student phase, the "Data_Percent" parameters added to the code in the last lines of main.py. The value of "Data_Percent" could be change between 0.0 and 1.0 which is for 0% and 100% of data respectfully.
+  3. For changing the amount of data for training in Teacher Phase and Student phase, the "Data_Percent" parameter is added to the code in the last lines of main.py. The value of "Data_Percent" could be change between 0.0 and 1.0 which is for 0% and 100% of data respectfully.
 
 
 
