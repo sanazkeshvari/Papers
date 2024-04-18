@@ -17,7 +17,7 @@ The Implementaiotion has 2 phases as the paper says, Teacher Phase and Student P
   7. Results will be store into `allrank` directory in csv files with name ends with the "ListSD.csv" and Bandwidths values will be saved in directory named `One` into the `Parameters` directory which will be created in `allrank` directory after running "main.py".
 
 
-See Steps of Student Phase in This <a href = "https://github.com/sanazkeshvari/Papers/blob/06bf8bf07bc461a035cabb797ecd50bd24b66b7a/SDLR/Code_Help/SDLR_Teacher_20240418_VeryFast1080.mp4">Video</a>.
+See Steps of Teacher Phase in This <a href = "https://github.com/sanazkeshvari/Papers/blob/06bf8bf07bc461a035cabb797ecd50bd24b66b7a/SDLR/Code_Help/SDLR_Teacher_20240418_VeryFast1080.mp4">Video</a>.
 
 
 
