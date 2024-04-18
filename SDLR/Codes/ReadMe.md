@@ -7,18 +7,38 @@ The Implementaiotion has 2 phases as the paper says, Teacher Phase and Student P
   1. Unpack the <a href = "https://github.com/allegro/allRank">allrank</a> package in the target directory (such as a directory named Teacher).
   2. Download and unpack the SDLR.zip file here (which contains of all the implementation codes in current directory).
   3. Replace or overwrite the unpacked codes of SDLR.zip into the `allrank` directory of the extracted <a href = "https://github.com/allegro/allRank">allrank</a> package.
-  4. Set your running settings in the files have names that start with "lambdarank_atmax" of `in` directory inside the `allrank` directory and remember to set the ListSD for name of loss in that setting (Note: the name of loss function is case sensitive).
+  4. Set your running settings in the files have names that start with "lambdarank_atmax" of `in` directory inside the `allrank` directory and remember to set the "ListSD" for name of loss in that setting (Note: the name of loss function is case sensitive).
 
      (Change the "inupt-norm" of setting file to ${\color{cyan}True}$ for MSLR10K and MSLR30K.)
-  6. Go to the main.py in `allrank` directory and in the final lines of the code, change the range of loop with the range of your running settings of `in` directory
+  6. Go to the "main.py" in `allrank` directory and in the final lines of the code, change the range of loop with the range of your running settings of `in` directory then run the "main.py".
 
      (E.G. if you create and set lambdarank_atmax1.json, lambdarank_atmax2.json up to lambdarank_atmax13.json then you have to set the range of for loop to range(1,14) which will run all those setting files up to lambdarank_atmax13.json).
-  7. Results will be store into `allrank` directory in csv files with name ends with the "ListSD.csv" and Bandwidth values will be saved in directory named `One` into the `Parameters` directory which will be created in `allrank` directory after running main.py.
+  7. Results will be store into `allrank` directory in csv files with name ends with the "ListSD.csv" and Bandwidths values will be saved in directory named `One` into the `Parameters` directory which will be created in `allrank` directory after running "main.py".
   
 ### Student Phase:
-  1. Go through first three steps of Phase ordinally.
-  2. s
+  1. Go through first three steps of Teacher Phase ordinally.
+  2. Copy The `Parameters` directory of `allrank` directory from Teacher Phase (which includes of saved Bandwidths value that has reached by Teacher Phase) into the `allrank` directory of Student Phase.
+  3. Set you running setting as the step 4 of Teacher Phase But loss function for Student Phase should be "ListSDStu"(Note: the name of loss function is case sensitive).
+
+     (Change the "inupt-norm" of setting file to ${\color{cyan}True}$ for MSLR10K and MSLR30K.).
+  4. Run the "main.py" for training the Student Phase as the step 6 of Teacher Phase.
+  5. Results will be store into `allrank` directory in csv files with name ends with the "ListSDStu.csv"
+
+
+### Additional Notes:
+  1. For both Student Phase and Teacher Phase, some directories with names start with "out" will be created next to `allrank` directory which contains of the logs ans information of running the code for the defined setting (Such as `out2` directory for running "lambdarank_atmax2.json").
+  2. For Robustness experimental facing with the Normal Distribution Noise, there is 2 different type as the experimental section of the paper, feature based noise and normal distribution noise with defined variance. For this target, There are two parameters added to the codes which is accessible in the last lines of the "main.py": <br/>
+  The first Parameter is "Noise_Percent" which says the portion of data which will be choose randomly for adding noise to them that could be change between 0.0 and 1.0 those for 0% and 100% of data. <br/>
+  The second parameter is "Max_Noise" that determine the type of noise in 3 different options:
+     a. if it is equal to 0 means there is no noise or the results is for Not Noisy data. <br/>
+     b. if its value is positive it will add a Normal Distribution Noise with the set value that means the values of additive noise are in the range of minus and positive of that value (E.G. if Max_Noise equals 0.05 then it mean the values of Normal Distribution Noise will be in the range of -0.05 and 0.05).  <br/>
+     c. if the value of Max_Noise was set to a minus value then the noise will be add to data based on the variance of each feature. <br/>
   3. s
+
+
+
+
+
 
 
 ### 1. Replacements:
