@@ -27,16 +27,12 @@ The Implementaiotion has 2 phases as the paper says, Teacher Phase and Student P
 
 ### Additional Notes:
   1. For both Student Phase and Teacher Phase, some directories with names start with "out" will be created next to `allrank` directory which contains of the logs ans information of running the code for the defined setting (Such as `out2` directory for running "lambdarank_atmax2.json").
-  2. For Robustness experimental facing with the Normal Distribution Noise, there is 2 different type as the experimental section of the paper, feature based noise and normal distribution noise with defined variance. For this target, There are two parameters added to the codes which is accessible in the last lines of the "main.py": 
-  
-  The first Parameter is "Noise_Percent" which says the portion of data which will be choose randomly for adding noise to them that could be change between 0.0 and 1.0 those for 0% and 100% of data. 
-  
+  2. For Robustness experimental facing with the Normal Distribution Noise, there is 2 different type as the experimental section of the paper, feature based noise and normal distribution noise with defined variance. For this target, There are two parameters added to the codes which is accessible in the last lines of the "main.py": <br/> <br/>
+  The first Parameter is "Noise_Percent" which says the portion of data which will be choose randomly for adding noise to them that could be change between 0.0 and 1.0 those for 0% and 100% of data. <br/> <br/>  
   The second parameter is "Max_Noise" that determine the type of noise in 3 different options:
-     a. if it is equal to 0 means there is no noise or the results is for Not Noisy data.
-      
-     b. if its value is positive it will add a Normal Distribution Noise with the set value that means the values of additive noise are in the range of minus and positive of that value (E.G. if Max_Noise equals 0.05 then it mean the values of Normal Distribution Noise will be in the range of -0.05 and 0.05).  
-     
-     c. if the value of Max_Noise was set to a minus value then the noise will be add to data based on the variance of each feature.
+     a. if it is equal to 0 means there is no noise or the results is for Not Noisy data. <br/> <br/>      
+     b. if its value is positive it will add a Normal Distribution Noise with the set value that means the values of additive noise are in the range of minus and positive of that value (E.G. if Max_Noise equals 0.05 then it mean the values of Normal Distribution Noise will be in the range of -0.05 and 0.05). <br/> <br/>     
+     c. if the value of Max_Noise was set to a minus value then the noise will be add to data based on the variance of each feature. <br/> <br/>
   3. s
 
 
