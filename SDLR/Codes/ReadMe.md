@@ -1,20 +1,24 @@
 For Experimental Implementations, the <a href = "https://github.com/allegro/allRank">allrank</a> package of PyTorch is used. Some changes or additive code is utilize on that package which is as following:
 
 
-The Implementaiotion has 2 phase as the paper says, Teacher Phase and Student Phase respectfully that each has ordinal steps below for implementing them. Also, there are two GIF below that show the progress of how to run These Phases in the correct way in details:
+The Implementaiotion has 2 phases as the paper says, Teacher Phase and Student Phase respectfully that each has ordinal steps below for implementing them. Also, there are two GIF below that show the progress of how to run These Phases in the correct way in details:
 
 ### Teacher Phase:
   1. Unpack the <a href = "https://github.com/allegro/allRank">allrank</a> package in the target directory (such as a directory named Teacher).
   2. Download and unpack the SDLR.zip file here (which contains of all the implementation codes in current directory).
   3. Replace or overwrite the unpacked codes of SDLR.zip into the `allrank` directory of the extracted <a href = "https://github.com/allegro/allRank">allrank</a> package.
   4. Set your running settings in the files have names that start with "lambdarank_atmax" of `in` directory inside the `allrank` directory and remember to set the ListSD for name of loss in that setting (Note: the name of loss function is case sensitive).
-  5. Go to the main.py in `allrank` directory and in the final lines of the code, change the range of loop with the range of your running settings of `in` directory
+
+     (Change the "inupt-norm" of setting file to ${\color{cyan}True}$ for MSLR10K and MSLR30K.)
+  6. Go to the main.py in `allrank` directory and in the final lines of the code, change the range of loop with the range of your running settings of `in` directory
 
      (E.G. if you create and set lambdarank_atmax1.json, lambdarank_atmax2.json up to lambdarank_atmax13.json then you have to set the range of for loop to range(1,14) which will run all those setting files up to lambdarank_atmax13.json).
-  6. Results will be store into `allrank` directory in csv files with name ends with the "ListSD.csv" and Bandwidth values will be saved in directory named `one` into the `Parameters` directory which will be created in `allrank` directory after running main.py.
+  7. Results will be store into `allrank` directory in csv files with name ends with the "ListSD.csv" and Bandwidth values will be saved in directory named `One` into the `Parameters` directory which will be created in `allrank` directory after running main.py.
   
 ### Student Phase:
-  1. Do first three steps of 
+  1. Go through first three steps of Phase ordinally.
+  2. s
+  3. s
 
 
 ### 1. Replacements:
