@@ -17,7 +17,8 @@ The Implementaiotion has 2 phases as the paper says, Teacher Phase and Student P
   7. Results will be store into `allrank` directory in csv files with name ends with the "ListSD.csv" and Bandwidths values will be saved in directory named `One` into the `Parameters` directory which will be created in `allrank` directory after running "main.py".
 
 
-https://github.com/sanazkeshvari/Papers/blob/06bf8bf07bc461a035cabb797ecd50bd24b66b7a/SDLR/Code_Help/SDLR_Teacher_20240418_VeryFast1080.mp4
+See Steps of Student Phase in This <a href = "https://github.com/sanazkeshvari/Papers/blob/06bf8bf07bc461a035cabb797ecd50bd24b66b7a/SDLR/Code_Help/SDLR_Teacher_20240418_VeryFast1080.mp4">Video</a>.
+
 
 
 <br/> <br/>
@@ -31,17 +32,7 @@ https://github.com/sanazkeshvari/Papers/blob/06bf8bf07bc461a035cabb797ecd50bd24b
   4. Run the "main.py" for training the Student Phase as the step 6 of Teacher Phase.
   5. Results will be store into `allrank` directory in csv files with name ends with the "ListSDStu.csv"
 
-
-<p align="center">
-  <video src="https://github.com/sanazkeshvari/Papers/blob/06bf8bf07bc461a035cabb797ecd50bd24b66b7a/SDLR/Code_Help/SDLR_Student_20240418_VeryFast1080.mp4" width="500px"></video>
-</p>
-
-<video src="https://github.com/sanazkeshvari/Papers/blob/06bf8bf07bc461a035cabb797ecd50bd24b66b7a/SDLR/Code_Help/SDLR_Student_20240418_VeryFast1080.mp4" width="320" height="240" controls></video>
-
-![non working video](https://github.com/sanazkeshvari/Papers/blob/06bf8bf07bc461a035cabb797ecd50bd24b66b7a/SDLR/Code_Help/SDLR_Student_20240418_VeryFast1080.mp4)
-
-<video src="https://github.com/sanazkeshvari/Papers/blob/06bf8bf07bc461a035cabb797ecd50bd24b66b7a/SDLR/Code_Help/SDLR_Student_20240418_VeryFast1080.mp4"></video>
-
+See Steps of Student Phase in This <a href = "https://github.com/sanazkeshvari/Papers/blob/06bf8bf07bc461a035cabb797ecd50bd24b66b7a/SDLR/Code_Help/SDLR_Student_20240418_VeryFast1080.mp4">Video</a>.
 
 <br/> <br/> <br/>
 
