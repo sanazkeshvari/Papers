@@ -14,6 +14,8 @@ The Implementaiotion has 2 phases as the paper says, Teacher Phase and Student P
 
      (E.G. if you create and set lambdarank_atmax1.json, lambdarank_atmax2.json up to lambdarank_atmax13.json then you have to set the range of for loop to range(1,14) which will run all those setting files up to lambdarank_atmax13.json).
   7. Results will be store into `allrank` directory in csv files with name ends with the "ListSD.csv" and Bandwidths values will be saved in directory named `One` into the `Parameters` directory which will be created in `allrank` directory after running "main.py".
+
+<br/> <br/>
   
 ## Student Phase:
   1. Go through first three steps of Teacher Phase ordinally.
