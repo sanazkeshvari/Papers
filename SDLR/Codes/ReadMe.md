@@ -9,7 +9,7 @@ The Implementaiotion has 2 phases as the paper says, Teacher Phase and Student P
   3. Replace or overwrite the unpacked codes of SDLR.zip into the `allrank` directory of the extracted <a href = "https://github.com/allegro/allRank">allrank</a> package.
   4. Set your running settings in the files have names that start with "lambdarank_atmax" of `in` directory inside the `allrank` directory and remember to set the datasets address in "path" of "data" and "ListSD" for name of loss in that setting (Note: the name of loss function is case sensitive).
 
-     (Change the "inupt-norm" of setting file to ${\color{cyan}True}$ for MSLR10K and MSLR30K.)
+     (Change the "inupt-norm" of setting file to ${\color{cyan}True}$ for MSLR10K and MSLR30K.) <br/>
      (Datasets address should be a directory address that contains of train.txt, vali.txt, and test.txt and it should be mentioned that which of vali.txt and test.txt should be used for validation data of training)
   6. Go to the "main.py" in `allrank` directory and in the final lines of the code, change the range of loop with the range of your running settings of `in` directory then run the "main.py".
 
