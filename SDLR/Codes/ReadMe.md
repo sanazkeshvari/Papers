@@ -1,7 +1,7 @@
 For Experimental Implementations, the <a href = "https://github.com/allegro/allRank">allrank</a> package of PyTorch is used. Some changes or additive code is utilize on that package which is as following:
 
 
-The Implementaiotion has 2 phase as the paper says, Teacher Phase and Student Phase respectfully that have ordinal steps below for implementing them. Also, there is a GIF below that show the progress of how to run These Phases in the correct way in details:
+The Implementaiotion has 2 phase as the paper says, Teacher Phase and Student Phase respectfully that each has ordinal steps below for implementing them. Also, there are two GIF below that show the progress of how to run These Phases in the correct way in details:
 
 ### Teacher Phase:
   1. Unpack the <a href = "https://github.com/allegro/allRank">allrank</a> package in the target directory (such as a directory named Teacher).
