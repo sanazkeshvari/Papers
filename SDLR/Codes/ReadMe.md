@@ -31,8 +31,8 @@ https://github.com/sanazkeshvari/Papers/blob/06bf8bf07bc461a035cabb797ecd50bd24b
   4. Run the "main.py" for training the Student Phase as the step 6 of Teacher Phase.
   5. Results will be store into `allrank` directory in csv files with name ends with the "ListSDStu.csv"
 
+<video src="[URL](https://github.com/sanazkeshvari/Papers/blob/06bf8bf07bc461a035cabb797ecd50bd24b66b7a/SDLR/Code_Help/SDLR_Student_20240418_VeryFast1080.mp4)"></video>
 
-![](https://github.com/sanazkeshvari/Papers/blob/06bf8bf07bc461a035cabb797ecd50bd24b66b7a/SDLR/Code_Help/SDLR_Student_20240418_VeryFast1080.mp4)
 
 <br/> <br/> <br/>
 
