@@ -106,7 +106,35 @@ class LibSVMDataset(Dataset):
         :param transform: a callable defining an optional transformation called on the dataset
         """
         X = X.toarray()
-        
+
+        from allrank import config as conf  ###
+
+        if conf.Max_Noise >= 0 :
+            #Noise = np.random.rand(int(conf.Noise_Percent * X.shape[0]), X.shape[1]) * conf.Max_Noise
+            Noise = np.random.normal(0, conf.Max_Noise / 5.0, size = (int(conf.Noise_Percent * X.shape[0]), X.shape[1]))
+
+            #### Start Of New Noise Version #####
+        elif conf.Max_Noise < 0 :
+            print("-----------------------\nDynamic Noise Generation \n-----------------------")
+            Features_Max = np.var(X, axis = 0) / 5.0
+            Noise = np.array([])
+            for i in range(X.shape[1]):
+                Temp = np.random.normal(0, Features_Max[i], size = (int(conf.Noise_Percent * X.shape[0]), 1))
+                Noise = np.concatenate((Noise , Temp), axis = 1) if len(Noise) > 1 else Temp
+
+        #### End Of New Noise Version #####
+
+        Noise_Indices = np.random.choice(X.shape[0], size = int(conf.Noise_Percent * X.shape[0]), replace = False)
+        Max_Value = np.max(X)
+        if Max_Value > 1:  # MSLR
+            print("%%%%%%%\n%%%%%%%")
+            Noise *= 10
+        for i in range(Noise.shape[0]):
+            X[Noise_Indices[i], :] = np.add(X[Noise_Indices[i], :], Noise[i, :])
+            if Max_Value <= 1: # Not MSLR
+                X[Noise_Indices[i], :] = np.add(np.multiply((X[Noise_Indices[i], :] <= 1).astype(np.int8), X[Noise_Indices[i], :]), np.multiply((X[Noise_Indices[i], :] > 1).astype(np.int8), 1))
+                X[Noise_Indices[i], :] = np.add(np.multiply((X[Noise_Indices[i], :] >= 0).astype(np.int8), X[Noise_Indices[i], :]),np.multiply((X[Noise_Indices[i], :] < 0).astype(np.int8), 0))
+
         """
         ####################### Start Of Mean And Sigma Computing #######################
         Unique_Labels = np.sort(np.unique(y)).tolist()
@@ -136,9 +164,9 @@ class LibSVMDataset(Dataset):
         ####################### End Of Mean And Sigma Computing #######################
         """
         
-        query_ids = np.random.choice(query_ids, int(len(query_ids) * 0.5))
-
+        query_ids = np.random.choice(query_ids, int(len(query_ids) * conf.Data_Percent))
         _, indices, counts = np.unique(query_ids, return_index=True, return_counts=True)
+        
         groups = np.cumsum(counts[np.argsort(indices)])
         self.X_by_qid = np.split(X, groups)[:-1]
         self.y_by_qid = np.split(y, groups)[:-1]
@@ -238,13 +266,21 @@ def load_libsvm_dataset(input_path: str, slate_length: int, validation_ds_role: 
 
     val_ds = load_libsvm_dataset_role(validation_ds_role, input_path, slate_length)
     ###
-    print("----------------------- Loading Again -----------------------")
-    print("slate_length Changed From ", slate_length, end = " ")
-    slate_length = int(np.ceil(max([train_ds.longest_query_length, val_ds.longest_query_length]) / 10) * 10)
-    print("To ", slate_length)
-    train_ds = load_libsvm_dataset_role("train", input_path, slate_length)
-    #print()
-    val_ds = load_libsvm_dataset_role(validation_ds_role, input_path, slate_length)
+    New_slate_length = int(np.ceil(max([train_ds.longest_query_length, val_ds.longest_query_length]) / 10) * 10)
+
+    if New_slate_length < slate_length:
+        print("----------------------- Loading Again -----------------------")
+        torch.manual_seed(42)
+        torch.cuda.manual_seed_all(42)
+        np.random.seed(42)
+        print("slate_length Changed From ", slate_length, end = " ")
+        #slate_length = int(np.ceil(max([train_ds.longest_query_length, val_ds.longest_query_length]) / 10) * 10)
+        slate_length = New_slate_length
+        del New_slate_length
+        print("To ", slate_length)
+        train_ds = load_libsvm_dataset_role("train", input_path, slate_length)
+        #print()
+        val_ds = load_libsvm_dataset_role(validation_ds_role, input_path, slate_length)
     ###
     return train_ds, val_ds
 
@@ -279,8 +315,9 @@ def create_data_loaders(train_ds: LibSVMDataset, val_ds: LibSVMDataset, num_work
     total_batch_size = max(1, gpu_count) * batch_size
     logger.info("total batch size is {}".format(total_batch_size))
 
+    """
     for i in range(len(train_ds.X_by_qid)):
-        """px = torch.abs(torch.from_numpy(train_ds.X_by_qid[i]) )
+        px = torch.abs(torch.from_numpy(train_ds.X_by_qid[i]) )
 
         sigma = ((torch.max(px, dim=0).values - torch.min(px, dim=0).values ) / 6.0) + 1e-10
 
@@ -295,7 +332,8 @@ def create_data_loaders(train_ds: LibSVMDataset, val_ds: LibSVMDataset, num_work
 
         Info = pd.DataFrame(np.array(px_x.data))
         Info.to_csv("PX_X.csv")
-        train_ds.X_by_qid[i] = px_x"""
+        train_ds.X_by_qid[i] = px_x
+    """
 
     # Please note that the batch size for validation dataloader is twice the total_batch_size
     train_dl = DataLoader(train_ds, batch_size=total_batch_size, num_workers=num_workers, shuffle=True)
