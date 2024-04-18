@@ -8,7 +8,9 @@ The Implementaiotion has 2 phase as the paper says, Teacher Phase and Student Ph
   2. Download and unpack the SDLR.zip file here (which contains of all the implementation codes in current directory).
   3. Replace or overwrite the unpacked codes of SDLR.zip into the `allrank` directory of the extracted <a href = "https://github.com/allegro/allRank">allrank</a> package.
   4. Set your running settings in the files have names that start with "lambdarank_atmax" of `in` directory inside the `allrank` directory and remember to set the ListSD for name of loss in that setting (Note: the name of loss function is case sensitive).
-  5. Go to the main.py in `allrank` directory and in the final lines of the code, change the range of loop with the range of your running settings of `in` directory (E.G. if you create and set lambdarank_atmax1.json, lambdarank_atmax2.json up to lambdarank_atmax13.json then you have to set the range of for loop to range(1,14) which will run all those setting files up to lambdarank_atmax13.json).
+  5. Go to the main.py in `allrank` directory and in the final lines of the code, change the range of loop with the range of your running settings of `in` directory
+     (E.G. if you create and set lambdarank_atmax1.json, lambdarank_atmax2.json up to lambdarank_atmax13.json then you have to set the range of for loop to range(1,14) which will run all those setting files up to lambdarank_atmax13.json).
+  7. ss
   
 ### Student Phase:
   1. Do first three steps of 
