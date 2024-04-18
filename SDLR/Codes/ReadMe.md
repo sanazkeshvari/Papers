@@ -1,7 +1,7 @@
 For Experimental Implementations, the <a href = "https://github.com/allegro/allRank">allrank</a> package of PyTorch is used. Some changes or additive code is utilize on that package which is as following:
 
 
-The Implementaiotion has 2 phases as the paper says, Teacher Phase and Student Phase respectfully that each has ordinal steps below for implementing them. Also, there are two GIF below that show the progress of how to run These Phases in the correct way in details:
+The Implementaiotion has 2 phases as the paper says, Teacher Phase and Student Phase respectfully that each has ordinal steps below for implementing them. Also, there are two Video below that show the progress of how to run These Phases in the correct way in details:
 
 ## Teacher Phase:
   1. Unpack the <a href = "https://github.com/allegro/allRank">allrank</a> package in the target directory (such as a directory named Teacher).
@@ -15,6 +15,9 @@ The Implementaiotion has 2 phases as the paper says, Teacher Phase and Student P
 
      (E.G. if you create and set lambdarank_atmax1.json, lambdarank_atmax2.json up to lambdarank_atmax13.json then you have to set the range of for loop to range(1,14) which will run all those setting files up to lambdarank_atmax13.json).
   7. Results will be store into `allrank` directory in csv files with name ends with the "ListSD.csv" and Bandwidths values will be saved in directory named `One` into the `Parameters` directory which will be created in `allrank` directory after running "main.py".
+
+
+
 
 <br/> <br/>
   
