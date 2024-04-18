@@ -32,7 +32,7 @@ def parse_args(i) -> Namespace:
     parser = ArgumentParser("allRank")
     parser.add_argument("--job-dir", help="Base output path for all experiments", required=False, default= ".\\") # /dataset/MQ2007/Fold1
     parser.add_argument("--run-id", help="Name of this run to be recorded (must be unique within output dir)", required=False, default= os.getcwd() + "\\..\\out"+str(i)+"\\")
-    parser.add_argument("--config-file-name", required=False, type=str, help="Name of json file with config", default= "..\\in\\lambdarank_atmax"+str(i)+".json")#mohem
+    parser.add_argument("--config-file-name", required=False, type=str, help="Name of json file with config", default= "in\\lambdarank_atmax"+str(i)+".json")#mohem
 
     return parser.parse_args()
 
