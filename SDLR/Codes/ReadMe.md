@@ -1,3 +1,13 @@
+Before implementation of the paper, some packages are required which are listed below:
+
+1. numpy
+2. pandas
+3. pytorch (known as torch)
+4. urllib
+5. shutil (pip install pytest-shutil)
+
+<hr/>
+
 For Experimental Implementations, the <a href = "https://github.com/allegro/allRank">allrank</a> package of PyTorch is used. Some changes or additive code is utilize on that package which is as following:
 
 
