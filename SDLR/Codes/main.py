@@ -146,7 +146,7 @@ if __name__ == "__main__":
     from allrank import config as conf ###
 
     conf.Noise_Percent = 1.0 # (0.3 Is 30%) Data Percent For Being Noisy
-    conf.Max_Noise = -0.1 # If Negative Then Dynamic Noise And If Positive, Variance Should Be Defined Like 0.03 (Default: 1 That Is Between [0, 1])
+    conf.Max_Noise = 0.0 # If Negative Then Dynamic Noise And If Positive, Variance Should Be Defined Like 0.03 (Default: 1 That Is Between [0, 1])
 
     Run_Times = []
 
