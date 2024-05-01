@@ -88,7 +88,7 @@ Info = Info_File.read()
 Info_File.close()
 
 Dataset_Address_Index = Info.find("path_to_dataset")
-Info = Info.replace(Info[Dataset_Address_Index - 1: Dataset_Address_Index + 16], os.getcwd() + "/Datasets/Test_Dataset/")
+Info = Info.replace(Info[Dataset_Address_Index - 1: Dataset_Address_Index + 16], os.getcwd().replace("\\", "/") + "/Datasets/Test_Dataset/")
 
 Info_File = open("./Datasets/Test_Dataset/lambdarank_atmax1.json", "w")
 Info_File.write(Info)
