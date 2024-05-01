@@ -6,6 +6,7 @@ Before implementation of the paper, some packages are required which are listed 
 4. urllib
 5. shutil (pip install pytest-shutil)
 6. gcsfs
+7. tensorboardX
 
 <hr/>
 
