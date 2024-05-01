@@ -1,10 +1,9 @@
-Before implementation of the paper, some packages are required which are listed below:
+Before implementation of the paper, some packages are required which are listed In `requirements.txt` and some important packegs of them are as below:
 
 1. numpy
 2. pandas
 3. pytorch (known as torch)
-4. urllib
-5. shutil (pip install pytest-shutil)
+4. shutil (pip install pytest-shutil)
 6. gcsfs
 7. tensorboardX
 
