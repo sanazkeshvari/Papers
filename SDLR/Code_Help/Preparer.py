@@ -71,7 +71,7 @@ for i in range(5):
 
 
 ####################### Download Sample Data (Test_Dataset) #######################
-print("Downloading Test Dataset...")
+print("\n\nDownloading Test Dataset...")
 Response = requests.get("https://raw.githubusercontent.com/sanazkeshvari/Papers/main/SDLR/Code_Help/Test_Dataset.zip")
 with open("./Test_Dataset.zip", "wb") as F:
   F.write(Response.content)
