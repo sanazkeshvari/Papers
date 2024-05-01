@@ -5,6 +5,7 @@ Before implementation of the paper, some packages are required which are listed 
 3. pytorch (known as torch)
 4. urllib
 5. shutil (pip install pytest-shutil)
+6. gcsfs
 
 <hr/>
 
