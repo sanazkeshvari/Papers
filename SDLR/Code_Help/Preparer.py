@@ -141,14 +141,17 @@ print("\n\n -----------------------\n Teacher Phase \n -----------------------\n
 os.system("py ./Teacher/allrank/main.py")
 
 
-shutil.copytree("./Teacher/allrank/Parameters/", "./Student/allrank/Parameters/")
-print("Bandwidths values that were computed by the Teacher is copied to the Student Phase")
+try:
+  shutil.copytree("./Teacher/allrank/Parameters/", "./Student/allrank/Parameters/")
+  print("Bandwidths values that were computed by the Teacher is copied to the Student Phase")
 
 
-print("\n\n -----------------------\n Student Phase \n -----------------------\n\n")
+  print("\n\n -----------------------\n Student Phase \n -----------------------\n\n")
 
-os.system("py ./Student/allrank/main.py")
+  os.system("py ./Student/allrank/main.py")
 
+except:
+  print("Your device does not meet the requirements.\n")
 
 print("The results of the Teacher Phase and the Student Phase is accessible in -allrank- directory of each one in Sheet Files which ends with the name of given Dataset")
 print()
