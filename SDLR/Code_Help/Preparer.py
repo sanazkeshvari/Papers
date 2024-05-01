@@ -65,8 +65,8 @@ print("\n####################### #######################\n")
 print("You can pause the run now if you do not want to check the code")
 print("\t By closing the running window or press Ctrl + C keys")
 print("\n####################### #######################")
-for i in range(5):
-  print(5 - i, end = "\t")
+for i in range(9):
+  print(9 - i, end = "\t")
   time.sleep(0.99)
 
 
