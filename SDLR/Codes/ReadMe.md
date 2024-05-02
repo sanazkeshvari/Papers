@@ -22,10 +22,9 @@ there is two ways to execute the codes of this method which the first is easy, h
 2. Place the Preparer code on the target directory that you want all the codes place inside it.
 3. Run the Preparer code and it will create the structure of this research and execute an example.
 
+ <br/>  <br/>
 
-
-<b>The Second way:</b>
-
+<b>The Second way:</b> <br/>
 Follow below steps that explain the detials of implementation.
 
 
