@@ -7,11 +7,23 @@ Before implementation of the paper, some packages are required which are listed 
 6. gcsfs
 7. tensorboardX
 
- <b> Important Note:</b> This code needs a system with <b>GPU</b>. Make sure your torch version was compatible with <b>CUDA</n> except it won't execute.
+ <b> Important Note:</b> This code needs a system with <b>GPU</b>. Make sure your torch version was compatible with <b>CUDA</b> except it won't execute.
+
+(Note that the basic package of python is not mentioned here and supposed that those are installed.)
 
 <hr/>
 
-For Experimental Implementations, the <a href = "https://github.com/allegro/allRank">allrank</a> package of PyTorch is used. Some changes or additive code is utilize on that package which is as following:
+For Experimental Implementations, the <a href = "https://github.com/allegro/allRank">allrank</a> package of PyTorch is used but Some changes or additive code is utilize on that package.
+
+there is two ways to execute the codes of this method which the first is easy, however, the second has details of how to run manually those are as following:
+
+<b>The First way:</b> 
+1. Download <a href = "">the Preparer code</a>.
+2. Place the Preparer code on the target directory that you want all the codes place inside it.
+3. Run the Preparer code and it will create the structure of this research and execute an example.
+
+<b>The Second way:</b>
+Follow below steps that explain the detials of implementation.
 
 
 The Implementaiotion has 2 phases as the paper says, Teacher Phase and Student Phase respectfully that each has ordinal steps below for implementing them. Also, there are two Video below that show the progress of how to run These Phases in the correct way in details:
