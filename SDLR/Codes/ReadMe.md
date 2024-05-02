@@ -18,7 +18,7 @@ For Experimental Implementations, the <a href = "https://github.com/allegro/allR
 there is two ways to execute the codes of this method which the first is easy, however, the second has details of how to run manually as following (additional notes are in the end of this page):
 
 <b>The First way:</b> 
-1. Download <a href = "https://raw.githubusercontent.com/sanazkeshvari/Papers/main/SDLR/Code_Help/Preparer.py" target = "_blank" download = "true">the Preparer code</a>.
+1. Download <a href = "https://github.com/sanazkeshvari/Papers/blob/f7e9c53d83f1ea16465f103b47f77a650e2a2f57/SDLR/Code_Help/Preparer.py" target = "_blank" download = "true">the Preparer code</a>.
 2. Place the Preparer code on the target directory that you want all the codes place inside it.
 3. Run the Preparer code and it will create the structure of this research and execute an example.
 
