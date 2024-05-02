@@ -15,7 +15,7 @@ Before implementation of the paper, some packages are required which are listed 
 
 For Experimental Implementations, the <a href = "https://github.com/allegro/allRank">allrank</a> package of PyTorch is used but Some changes or additive code is utilize on that package.
 
-there is two ways to execute the codes of this method which the first is easy, however, the second has details of how to run manually those are as following:
+there is two ways to execute the codes of this method which the first is easy, however, the second has details of how to run manually as following:
 
 <b>The First way:</b> 
 1. Download <a href = "">the Preparer code</a>.
