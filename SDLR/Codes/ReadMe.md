@@ -7,6 +7,8 @@ Before implementation of the paper, some packages are required which are listed 
 6. gcsfs
 7. tensorboardX
 
+ <b> Important Note:</b> This code needs a system with GPU. Make sure your torch version support CUDA except it won't execute.
+
 <hr/>
 
 For Experimental Implementations, the <a href = "https://github.com/allegro/allRank">allrank</a> package of PyTorch is used. Some changes or additive code is utilize on that package which is as following:
