@@ -15,10 +15,10 @@ Before implementation of the paper, some packages are required which are listed 
 
 For Experimental Implementations, the <a href = "https://github.com/allegro/allRank">allrank</a> package of PyTorch is used but Some changes or additive code is utilize on that package.
 
-there is two ways to execute the codes of this method which the first is easy, however, the second has details of how to run manually as following:
+there is two ways to execute the codes of this method which the first is easy, however, the second has details of how to run manually as following (additional notes are in the end of this page):
 
 <b>The First way:</b> 
-1. Download <a href = "">the Preparer code</a>.
+1. Download <a href = "https://raw.githubusercontent.com/sanazkeshvari/Papers/main/SDLR/Code_Help/Preparer.py">the Preparer code</a>.
 2. Place the Preparer code on the target directory that you want all the codes place inside it.
 3. Run the Preparer code and it will create the structure of this research and execute an example.
 
