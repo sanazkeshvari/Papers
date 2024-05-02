@@ -7,7 +7,7 @@ Before implementation of the paper, some packages are required which are listed 
 6. gcsfs
 7. tensorboardX
 
- <b> Important Note:</b> This code needs a system with GPU. Make sure your torch version support CUDA except it won't execute.
+ <b> Important Note:</b> This code needs a system with <b>GPU</b>. Make sure your torch version was compatible with <b>CUDA</n> except it won't execute.
 
 <hr/>
 
