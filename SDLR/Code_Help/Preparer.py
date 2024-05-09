@@ -6,7 +6,7 @@ import sys
 if len(sys.argv) >= 2:
     dataToTrain = sys.argv[1]
 else:
-    dataToTrain = "https://raw.githubusercontent.com/sanazkeshvari/Papers/main/SDLR/Codes/SDLR.zip"
+    dataToTrain = "https://raw.githubusercontent.com/sanazkeshvari/Papers/main/SDLR/Code_Help/Test_Dataset.zip"
 
 
 
@@ -42,7 +42,7 @@ Response.close()
 ####################### Download the SDLR Package #######################
 #from git import Repo  # pip install gitpython
 #Repo.clone_from(git_url, repo_dir)
-Response = requests.get(dataToTrain)
+Response = requests.get(https://raw.githubusercontent.com/sanazkeshvari/Papers/main/SDLR/Codes/SDLR.zip)
 with open("./SDLR.zip", "wb") as F:
   F.write(Response.content)
 Response.close()
@@ -81,7 +81,7 @@ for i in range(9):
 
 ####################### Download Sample Data (Test_Dataset) #######################
 print("\n\nDownloading Test Dataset...")
-Response = requests.get("https://raw.githubusercontent.com/sanazkeshvari/Papers/main/SDLR/Code_Help/Test_Dataset.zip")
+Response = requests.get(dataToTrain)
 with open("./Test_Dataset.zip", "wb") as F:
   F.write(Response.content)
 Response.close()
