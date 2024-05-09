@@ -1,4 +1,4 @@
-Results include of <b>NDCG</b> and <b>MRR</b> metrics that are computed for baseline methods and SDLR in `Baselines` and `SDLR` directories.
+Results are reported in terms of <b>NDCG</b> and <b>MRR</b>  for baseline methods and SDLR in `Baselines` and `SDLR` directories.
 
 SDLR Data are reported in Noisy and Not_Noisy settings.
 
