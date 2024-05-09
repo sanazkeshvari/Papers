@@ -1,4 +1,6 @@
-This section contains of the SDLR results measured with metrics of <b>NDCG</b> and <b>MRR</b> on usual data and noisy data with different noises of famous published datasets.
+The results include three different settings as below:
 
-Below is the algorithm of the SDLR in the teacher phase (the difference between teacher phase and the student phase is the computation of distribution bandwidths in teacher phase): 
-<img width="1315" alt="model1" src="https://github.com/sanazkeshvari/Papers/assets/48029925/16288e3e-f4ba-41f3-b6f1-fdbdfaf32cb5">
+    Data were split with different ratios between the teacher and student in 'Different ratio of Data'.
+    All data were provided only to the teacher phase (there is no student phase) in 'Teacher Only'.
+    Both teacher and student were trained on all the data in 'Train over 100% of training data'.
+
