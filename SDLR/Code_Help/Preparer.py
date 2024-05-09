@@ -42,7 +42,7 @@ Response.close()
 ####################### Download the SDLR Package #######################
 #from git import Repo  # pip install gitpython
 #Repo.clone_from(git_url, repo_dir)
-Response = requests.get(https://raw.githubusercontent.com/sanazkeshvari/Papers/main/SDLR/Codes/SDLR.zip)
+Response = requests.get("https://raw.githubusercontent.com/sanazkeshvari/Papers/main/SDLR/Codes/SDLR.zip")
 with open("./SDLR.zip", "wb") as F:
   F.write(Response.content)
 Response.close()
