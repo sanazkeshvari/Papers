@@ -41,9 +41,7 @@ In the following, we explain two different ways you can train the teacher and st
 4. The expected format of the dataset is a zip file consisting of the following files: train, test, dev, and setting. The setting file has been placed separately in the 'Code_Help' directory ('Code_Help/setting.json')
 5. After installing all the required packages, use Python 3 for running Preparer.py.
 
- <br/>  <br/>
-
-<b>The Second way:</b> <br/>
+<b>Second: Manual Preparation of codes and data</b> <br/>
 Follow below steps that explain the detials of implementation.
 
 
