@@ -35,7 +35,7 @@ In the following, we explain two different ways you can train the teacher and st
 
 
 <b>First: Running the script</b> 
-1. Download <a href = "https://raw.githubusercontent.com/sanazkeshvari/Papers/main/SDLR/Code_Help/Preparer.py" target = "_blank" download="SDLR">the Preparer code</a> (or from <a href = "https://github.com/sanazkeshvari/Papers/blob/f7e9c53d83f1ea16465f103b47f77a650e2a2f57/SDLR/Code_Help/Preparer.py" target = "_blank">Here</a>).
+1. Download <a href = "https://raw.githubusercontent.com/sanazkeshvari/Papers/main/SDLR/Code_Help/Preparer.py" target = "_blank" download="SDLR">the Preparer code</a>
 2. Place Preparer.py code in the destination directory.
 3. Preparer.py gets the web address of the dataset (The data on which models can be trained) as the input. The defualt value for this input is the sample database we provided in  <a href = "https://github.com/sanazkeshvari/Papers/tree/main/SDLR/Code_Help/Test_Dataset.zip"> Code_Help/Test_Dataset.zip </a>
 4. he expected format of the dataset is a zip file consisting of the following files: train, test, dev, and setting. The setting file has been placed separately in the 'Code_Help' directory ('Code_Help/setting.json')
