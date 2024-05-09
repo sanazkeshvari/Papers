@@ -69,9 +69,9 @@ shutil.copytree("./Student/", "./Teacher/", )
 
 
 ####################### Start Checking By A Sample Dataset #######################
-print("\nIn the following, The code will run a simple example to show how it should be")
+print("\nIn the following, The code will be trained over the provided train data. The defult trian sample data is availabe in code_help")
 print("\n####################### #######################\n")
-print("You can pause the run now if you do not want to check the code")
+print("You can pause training")
 print("\t By closing the running window or press Ctrl + C keys")
 print("\n####################### #######################")
 for i in range(9):
@@ -80,7 +80,7 @@ for i in range(9):
 
 
 ####################### Download Sample Data (Test_Dataset) #######################
-print("\n\nDownloading Test Dataset...")
+print("\n\nDownloading  Dataset...")
 Response = requests.get(dataToTrain)
 with open("./Test_Dataset.zip", "wb") as F:
   F.write(Response.content)
