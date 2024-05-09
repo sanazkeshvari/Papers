@@ -1,4 +1,4 @@
-Data are reported in Noisy and Non-Noisy settings.
+Data are reported in Noisy and Not_Noisy settings.
 
 Two different noise settings are reported:
 <ul>
@@ -7,9 +7,9 @@ Two different noise settings are reported:
 </ul>
 
 
-Three different Non-Noisy are reported: settings as below:
-
-    Data were split with different ratios between the teacher and student in 'Different ratio of Data'.
-    All data were provided only to the teacher phase (there is no student phase) in 'Teacher Only'.
-    Both teacher and student were trained on all the data in 'Train over 100% of training data'.
-
+Not_Noisy results include three different settings as below:
+<ul>
+    <li> Data were split with different ratios between the teacher and student in 'Different ratio of Data'. </li>
+     <li>All data were provided only to the teacher phase (there is no student phase) in 'Teacher Only'. </li>
+     <li>Both teacher and student were trained on all the data in 'Train over 100% of training data'. </li>
+</ul>
