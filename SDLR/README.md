@@ -31,13 +31,15 @@ Some of the important packages are as follows:
 
 In our codes, we use and modify the learning to rank modules from  <a href = "https://github.com/allegro/allRank">allrank</a>.
 
-In the following, we explain about two different ways you can trian the teacher and student models of the SDLR framework. First, a python script download, extract, and run all the necessary codes, second, a detailed explanation of how to manually downlaod and run the code.
+In the following, we explain two different ways you can train the teacher and student models of the SDLR framework. First, a Python script, which downloads, extracts, and runs all the necessary code. Second, there is a detailed explanation of how to manually download and run the code.
 
 
 <b>First: Running the script</b> 
 1. Download <a href = "https://raw.githubusercontent.com/sanazkeshvari/Papers/main/SDLR/Code_Help/Preparer.py" target = "_blank" download="SDLR">the Preparer code</a> (or from <a href = "https://github.com/sanazkeshvari/Papers/blob/f7e9c53d83f1ea16465f103b47f77a650e2a2f57/SDLR/Code_Help/Preparer.py" target = "_blank">Here</a>).
-2. Place the Preparer code on the target directory that you want all the codes place inside it.
-3. Run the Preparer code and it will create the structure of this research and execute an example.
+2. Place Preparer.py code in the destination directory.
+3. Preparer.py gets the web address of the dataset (The data on which models can be trained) as the input. The defualt value for this input is the sample database we provided in  <a href = "https://github.com/sanazkeshvari/Papers/tree/main/SDLR/Code_Help/Test_Dataset.zip"> Code_Help/Test_Dataset.zip </a>
+4. he expected format of the dataset is a zip file consisting of the following files: train, test, dev, and setting. The setting file has been placed separately in the 'Code_Help' directory ('Code_Help/setting.json')
+5. After installing all the required packages, use Python 3 for running Preparer.py.
 
  <br/>  <br/>
 
