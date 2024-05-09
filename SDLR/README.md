@@ -48,7 +48,7 @@ Training this framework has two phases, as described in the paper: the Teacher P
 #### Teacher Phase:
   1. Unpack the <a href = "https://github.com/allegro/allRank">allrank</a> package in a target directory (such as a directory named Teacher).
   2. Download and unpack the SDLR.zip file (which contains all the implementation codes).
-  3. Replace or overwrite the unpacked codes of SDLR.zip into the `allrank` directory of the extracted <a href = "https://github.com/allegro/allRank">allrank</a> package.
+  3. Replace or add the unpacked codes of SDLR.zip into the `allrank` directory of the extracted <a href = "https://github.com/allegro/allRank">allrank</a> package (See Replacements section in this manual).
   4. Set your running settings in the files whose names start with "lambdarank_atmax" of `in` directory inside the `allrank` directory and remember to set the datasets address in "path" of "data" and "ListSD" for name of loss in that setting (Note: the name of loss function is case sensitive).
 
      (Change the "inupt-norm" of setting file to True for MSLR10K and MSLR30K.) 
@@ -64,56 +64,41 @@ See Steps of Teacher Phase in This <a href = "https://github.com/sanazkeshvari/P
 
   
 #### Student Phase:
-  1. Go through first three steps of Teacher Phase ordinally.
+  1. Go through first three steps of the Teacher Phase ordinally.
   2. Copy The `Parameters` directory of `allrank` directory from Teacher Phase (which includes of saved Bandwidths value that has reached by Teacher Phase) into the `allrank` directory of Student Phase.
   3. Set you running setting as the step 4 of Teacher Phase But loss function for Student Phase should be "ListSDStu"(Note: the name of loss function is case sensitive).
 
-     (Change the "inupt-norm" of setting file to ${\color{cyan}True}$ for MSLR10K and MSLR30K.).
+     (Change the "inupt-norm" of setting file to True for MSLR10K and MSLR30K.).
   4. Run the "main.py" for training the Student Phase as the step 6 of Teacher Phase.
   5. Results will be store into `allrank` directory in csv files with name ends with the "ListSDStu.csv"
 
 See Steps of Student Phase in This <a href = "https://github.com/sanazkeshvari/Papers/blob/06bf8bf07bc461a035cabb797ecd50bd24b66b7a/SDLR/Code_Help/SDLR_Student_20240418_VeryFast1080.mp4">Video</a>.
 
-<br/> <br/> <br/>
 
-## Additional Notes:
-  1. For both Student Phase and Teacher Phase, some directories with names start with "out" will be created next to `allrank` directory which contains of the logs ans information of running the code for the defined setting (Such as `out2` directory for running "lambdarank_atmax2.json").
-  2. For <b>Robustness</b> experimental facing with the <b>Normal Distribution Noise</b>, there is 2 different type as the experimental section of the paper, feature based noise and normal distribution noise with defined variance. For this target, There are two parameters added to the codes which is accessible in the last lines of the "main.py": <br/> <br/>
-  The first Parameter is "<b>Noise_Percent</b>" which says the portion of data which will be choose randomly for adding noise to them that could be change between 0.0 and 1.0 those for 0% and 100% of data respectfully. <br/> <br/>  
-  The second parameter is "<b>Max_Noise</b>" that determine the type of noise in 3 different options: <br/> 
-     a. if it is equal to 0 means there is no noise or the results is for Not Noisy data. <br/>
-        
-     b. if its value is positive it will add a Normal Distribution Noise with the set value that means the values of additive noise are in the range of minus and positive of that value (E.G. if Max_Noise equals 0.05 then it mean the values of Normal Distribution Noise will be in the range of -0.05 and 0.05). <br/>   
-     c. if the value of Max_Noise was set to a minus value then the noise will be add to data based on the variance of each feature. <br/>
-  3. For changing the amount of data for training in Teacher Phase and Student phase, the "Data_Percent" parameter is added to the code in the last lines of main.py. The value of "Data_Percent" could be change between 0.0 and 1.0 which is for 0% and 100% of data respectfully.
-  4. At the end of running all implementaions from all setting in the main.py (after finishing all trainings), a csv file with the name of "Run_Times.csv" will be created in `allrank` directory that shows the run time of the training for each setting of trainings.
+#### Additional Notes:
+  1. For both Student Phase and Teacher Phase, some directories whosw names start with "out" will be created next to `allrank` directory which contains of the logs ans information of running the code for the defined setting (Such as `out2` directory for running "lambdarank_atmax2.json").
+  2.For the <b>Robustness</b> experiment, there are two different types of noises as described in the experimental section of the paper: feature-based noise and normal distribution noise with a defined variance. To address this, two parameters have been added to the code, which are accessible in the last lines of the 'main.py' file: <br/> <br/>
+ The first parameter is "<b>Noise_Percent</b>," which specifies the portion of data randomly chosen to have noise added to it. This value can range between 0.0 and 1.0, representing 0% and 100% of the data, respectively. <br/> <br/>
+The second parameter is "<b>Max_Noise</b>," which determines the type of noise with three different options:
+
+a. If it is equal to 0, it means there is no noise.
+
+b. If its value is positive, it will add Normal Distribution Noise with the specified value. This means that the values of the additive noise will range from negative to positive of that value. For example, if Max_Noise equals 0.05, it means the values of Normal Distribution Noise will be in the range of -0.05 to 0.05.
+
+c. If the value of Max_Noise is set to a negative value, the noise will be added to the data based on the variance of each feature.
+
+  4.For changing the amount of data used for training in both the Teacher Phase and the Student Phase, the "Data_Percent" parameter is added to the code in the last lines of main.py. The value of "Data_Percent" can be adjusted between 0.0 and 1.0, representing 0% and 100% of the data, respectively."
+  
+  6. At the end of running all implementations for all settings in the main.py (after completing all training sessions), a CSV file named "Run_Times.csv" will be created in the allrank directory. This file shows the runtime of the training for each training setting.
 
 
 <br/> <br/> <br/> <br/> <br/>
 
-<!---
-### 1. Replacements:
-  Replace `main.py` and `config.py` of this directory with same file in `allrank` directory of allrank package.
-  
-  Replace `train_utils.py` in `training` directory of target package.
-  
-  Replace `dataset_loading.py` from here within `data` directory of allrank package.
-  
-  Replace `__init__.py` from here with similar one in `losses` in `models` directory of allrank package.
-  
-### 2. Adding:
-  Add `listSDStu.py` and `listSDStu.py` from here to directory `losses` in `models` directory of allrank packge.
-### 3. Changes In Code:
-  Change setting of model training at `lambdarank.json` files with the experimental setting in the paper.
-  
-  Change name of loss to "listSDStu" for Teacher phase and "listSDStus" for Student phase in `lambdarank.json`.
-  
-  Change the "inupt-norm" value to ${\color{cyan}True}$ for MSLR10K and MSLR30K.
-  
 
-<b>Important Note</b>: There is a change in running <i>teacher</i> and <i>student</i>. Two different directory should be made for Student and Teacher with same mentioned changes above. After training of Teacher phase finished, the directory `Parameters` from `allrank` direcotory should copy to `allrank` directory of the Student, then with changing `lambdarank` setting in Student directory, The Student phase training could be started. 
-
---->
+### Replacements:
+1. Replacements: main.py, and config.py,`train_utils.py`, `dataset_loading.py` , `__init__.py`.
+  
+2. Adding: two new losses have been added: `listSDStu.py` and `listSDStu.py` in the  `losses` directory.
 
 
 
