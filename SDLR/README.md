@@ -34,26 +34,24 @@ In our codes, we use and modify the learning to rank modules from  <a href = "ht
 In the following, we explain two different ways you can train the teacher and student models of the SDLR framework. First, a Python script, which downloads, extracts, and runs all the necessary code. Second, there is a detailed explanation of how to manually download and run the code.
 
 
-<b>First: Running the script</b> 
+### First: Running the script
 1. Download <a href = "https://raw.githubusercontent.com/sanazkeshvari/Papers/main/SDLR/Codes/Prepare.py" target = "_blank" download="SDLR">Prepare.py</a>
 2. Place Prepare.py code in the destination directory.
 3. Prepare.py gets the web address of the dataset (The data on which models can be trained) as the input. The defualt value for this input is the sample database we provided in  <a href = "https://github.com/sanazkeshvari/Papers/tree/main/SDLR/Code_Help/Test_Dataset.zip"> Code_Help/Test_Dataset.zip </a>
-4. The expected format of the dataset is a zip file consisting of the following files: train, test, dev, and setting. The setting file has been placed separately in the 'Code_Help' directory ('Code_Help/setting.json')
+4. The expected format of the dataset is a zip file consisting of the following files: train, test, dev, and setting. The setting file has been placed separately in the 'Code_Help' directory ('Code_Help/setting.json'). Please note that this is only one setting among all the settings tested and reported in the paper. You can manually change the setting file.
 5. After installing all the required packages, use Python 3 for running Preparer.py.
 
-<b>Second: Manual Preparation of codes and data</b> <br/>
-Follow below steps that explain the detials of implementation.
+### Second: Manual Preparation of codes and data
 
+Training this framework has two phases, as described in the paper: the Teacher Phase and the Student Phase. Each phase consists of the follwoing steps. Additionally, there are two videos that show the detailed process of training these phases correctly.
 
-The Implementaiotion has 2 phases as the paper says, Teacher Phase and Student Phase respectfully that each has ordinal steps below for implementing them. Also, there are two Video below that show the progress of how to run These Phases in the correct way in details:
-
-## Teacher Phase:
-  1. Unpack the <a href = "https://github.com/allegro/allRank">allrank</a> package in the target directory (such as a directory named Teacher).
-  2. Download and unpack the SDLR.zip file here (which contains of all the implementation codes in current directory).
+#### Teacher Phase:
+  1. Unpack the <a href = "https://github.com/allegro/allRank">allrank</a> package in a target directory (such as a directory named Teacher).
+  2. Download and unpack the SDLR.zip file (which contains all the implementation codes).
   3. Replace or overwrite the unpacked codes of SDLR.zip into the `allrank` directory of the extracted <a href = "https://github.com/allegro/allRank">allrank</a> package.
-  4. Set your running settings in the files have names that start with "lambdarank_atmax" of `in` directory inside the `allrank` directory and remember to set the datasets address in "path" of "data" and "ListSD" for name of loss in that setting (Note: the name of loss function is case sensitive).
+  4. Set your running settings in the files whose names start with "lambdarank_atmax" of `in` directory inside the `allrank` directory and remember to set the datasets address in "path" of "data" and "ListSD" for name of loss in that setting (Note: the name of loss function is case sensitive).
 
-     (Change the "inupt-norm" of setting file to ${\color{cyan}True}$ for MSLR10K and MSLR30K.) <br/>
+     (Change the "inupt-norm" of setting file to True for MSLR10K and MSLR30K.) 
      (Datasets address should be a directory address that contains of train.txt, vali.txt, and test.txt and it should be mentioned that which of vali.txt and test.txt should be used for validation data of training)
   6. Go to the "main.py" in `allrank` directory and in the final lines of the code, change the range of loop with the range of your running settings of `in` directory then run the "main.py".
 
@@ -64,10 +62,8 @@ The Implementaiotion has 2 phases as the paper says, Teacher Phase and Student P
 See Steps of Teacher Phase in This <a href = "https://github.com/sanazkeshvari/Papers/blob/06bf8bf07bc461a035cabb797ecd50bd24b66b7a/SDLR/Code_Help/SDLR_Teacher_20240418_VeryFast1080.mp4">Video</a>.
 
 
-
-<br/> <br/>
   
-## Student Phase:
+#### Student Phase:
   1. Go through first three steps of Teacher Phase ordinally.
   2. Copy The `Parameters` directory of `allrank` directory from Teacher Phase (which includes of saved Bandwidths value that has reached by Teacher Phase) into the `allrank` directory of Student Phase.
   3. Set you running setting as the step 4 of Teacher Phase But loss function for Student Phase should be "ListSDStu"(Note: the name of loss function is case sensitive).
