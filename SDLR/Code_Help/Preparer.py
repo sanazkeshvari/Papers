@@ -2,8 +2,13 @@ import os
 import requests
 import time
 
-#import sys
-#sys.path = [os.getcwd().replace("\\", "/") + "/Teacher/"] + sys.path
+import sys
+if len(sys.argv) >= 2:
+    dataToTrain = sys.argv[1]
+else:
+    dataToTrain = "https://raw.githubusercontent.com/sanazkeshvari/Papers/main/SDLR/Codes/SDLR.zip"
+
+
 
 
 try:
@@ -37,7 +42,7 @@ Response.close()
 ####################### Download the SDLR Package #######################
 #from git import Repo  # pip install gitpython
 #Repo.clone_from(git_url, repo_dir)
-Response = requests.get("https://raw.githubusercontent.com/sanazkeshvari/Papers/main/SDLR/Codes/SDLR.zip")
+Response = requests.get(dataToTrain)
 with open("./SDLR.zip", "wb") as F:
   F.write(Response.content)
 Response.close()
