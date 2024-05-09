@@ -1,5 +1,5 @@
-Two different noises from normal distribution is examined in this research:
-
-1. With 0 mean and 0.05 variance In `Normal Distribution`.
-2. With 0 mean and variance of each feature's variance In `Feature base`.
-
+Two different noise settings are reported:
+<ul>
+  <li>Mean=0 and  variance=0.05 In `Normal Distribution`.</li>
+  <li>Mean=0 and  variance= each feature's variance In `Feature base`.</li>
+</ul>
