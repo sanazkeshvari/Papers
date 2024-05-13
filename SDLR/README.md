@@ -46,6 +46,7 @@ In the following, we explain two different ways you can train the teacher and st
 Training this framework has two phases, as described in the paper: the Teacher Phase and the Student Phase. Each phase consists of the follwoing steps. Additionally, there are two videos that show the detailed process of training these phases correctly.
 
 #### Teacher Phase:
+
   1. Unpack the <a href = "https://github.com/allegro/allRank">allrank</a> package in a target directory (such as a directory named Teacher).
   2. Download and unpack the SDLR.zip file (which contains all the implementation codes).
   3. Replace or add the unpacked codes of SDLR.zip into the `allrank` directory of the extracted <a href = "https://github.com/allegro/allRank">allrank</a> package (See Replacements section in this manual).
@@ -64,13 +65,13 @@ See Steps of Teacher Phase in This <a href = "https://github.com/sanazkeshvari/P
 
   
 #### Student Phase:
-  1. Go through first three steps of the Teacher Phase ordinally.
-  2. Copy The `Parameters` directory of `allrank` directory from Teacher Phase (which includes of saved Bandwidths value that has reached by Teacher Phase) into the `allrank` directory of Student Phase.
-  3. Set you running setting as the step 4 of Teacher Phase But loss function for Student Phase should be "ListSDStu"(Note: the name of loss function is case sensitive).
+  1. Go through the first three steps of the Teacher Phase sequentially.
+  2. Copy the Parameters directory from the Teacher Phase's allrank directory (which includes saved Bandwidth values obtained during the Teacher Phase) into the allrank directory of the Student Phase.
+  3. Configure your running settings as in step 4 of the Teacher Phase, but ensure that the loss function for the Student Phase is set to "ListSDStu" (Note: the name of the loss function is case-sensitive).
 
      (Change the "inupt-norm" of setting file to True for MSLR10K and MSLR30K.).
-  4. Run the "main.py" for training the Student Phase as the step 6 of Teacher Phase.
-  5. Results will be store into `allrank` directory in csv files with name ends with the "ListSDStu.csv"
+  4. Execute the "main.py" script to train the Student Phase, following step 6 of training the Teacher model.
+  5. The results will be stored in the allrank directory in CSV files with names ending in "ListSDStu.csv".
 
 See Steps of Student Phase in This <a href = "https://github.com/sanazkeshvari/Papers/blob/06bf8bf07bc461a035cabb797ecd50bd24b66b7a/SDLR/Code_Help/SDLR_Student_20240418_VeryFast1080.mp4">Video</a>.
 
