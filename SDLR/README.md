@@ -10,7 +10,7 @@
 
 # Training and Running the code
 ## Running  
-All trained models can be found in /Code_Help/Trained_Models. The Python code in /Codes/Inferencing.py shows how to load the trained models and replicate the results reported in the paper.
+All trained models can be found in /Code_Help/Trained_Models. The Python code in <a href="https://github.com/sanazkeshvari/Papers/blob/main/SDLR/Codes/Inferencing.py"> Inferencing.py </a> shows how to load the trained models and replicate the results reported in the paper.
 ## Training 
 
 All the required code for training both teacher and student models can be found in /Codes/
